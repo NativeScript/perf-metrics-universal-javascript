@@ -1,0 +1,19 @@
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Marshalling Perf Metrics" icon="" />
+    <StackLayout class="p-20">
+        <Button text="Run Benchmarks" tap="{{ onTap }}" />
+        <StackLayout class="p-10" visibility="{{ viewLabels?.length===3 ? 'visible' : 'collapsed' }}">
+            <GridLayout rows="auto,1,auto,1,auto" columns="150,*">
+                <Label col="0" text="{{ viewLabels[0].label }}" class="font-weight-bold text-right m-r-10"/>
+                <Label col="1" text="{{ viewLabels[0].benchmark }}"/>
+
+                <Label row="2" col="0" text="{{ viewLabels[1].label }}" class="m-t-10 font-weight-bold text-right m-r-10"/>
+                <Label row="2" col="1" text="{{ viewLabels[1].benchmark }}" class="m-t-10"/>
+
+                <Label row="4" col="0" text="{{ viewLabels[2].label }}" class="m-t-10 font-weight-bold text-right m-r-10"/>
+                <Label row="4" col="1" text="{{ viewLabels[2].benchmark }}" class="m-t-10"/>
+            </GridLayout>
+        </StackLayout>
+    </StackLayout>
+</Page>
